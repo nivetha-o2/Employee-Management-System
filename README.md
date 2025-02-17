@@ -1,32 +1,52 @@
-# Angular13Crud
+# Employee Management System
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.1.
+This is an Employee Management System built using the MEAN stack (MongoDB, Express.js, Angular, Node.js). It allows administrators to manage employee data such as employee details, positions, date of joining, and performance reviews in an organization. The application offers a user-friendly interface for managing employee-related tasks and is designed to streamline HR management processes.
 
-## Development server
+## Table of Contents
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+- [Overview](#overview)
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Installation Instructions](#installation-instructions)
+  - [Backend Setup](#backend-setup)
+  - [Frontend Setup](#frontend-setup)
+- [Usage](#usage)
+- [API Endpoints](#api-endpoints)
+- [Contributing](#contributing)
+- [License](#license)
 
-## Code scaffolding
+## Overview
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+The Employee Management System is designed to help HR departments efficiently manage employee records. This system can add, update, and delete employee details, track their attendance, and manage other employee-related tasks.
 
-## Build
+### Key Functionalities:
+- Add, edit, and delete employee information.
+- View employee details such as name, role, department, etc.
+- Assign employees to roles.
+- Secure user authentication (Admin login).
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Features
 
-## Running unit tests
+- **Admin Dashboard:** A comprehensive dashboard to view and manage employees, roles, departments, and attendance.
+- **Employee Management:** Ability to add, update, and delete employees.
+- **Role Management:** Manage different roles and their permissions in the organization.
+- **Department Management:** Assign employees to specific departments.
+- **Attendance Management:** Track the attendance of employees.
+- **Authentication:** Secure login system for the admin using JWT.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Tech Stack
 
-## Running end-to-end tests
+### Frontend:
+- **Angular:** A powerful front-end framework for building dynamic single-page applications.
+- **HTML5/CSS3:** Basic structure and styling for the UI.
+- **Bootstrap:** Responsive design for mobile-friendly UI.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### Backend:
+- **Node.js:** JavaScript runtime for the backend server.
+- **Express.js:** Web framework for Node.js to handle HTTP requests and middleware.
 
-## Further help
+### Database:
+- **MongoDB:** NoSQL database to store employee and HR-related data.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
-"# Employee-Management-System" 
-"# Employee-Management-System" 
-"# Employee-Management-System" 
-"# Employee-Management-System" 
-"# Employee-Management-System" 
+### Authentication:
+- **JWT (JSON Web Tokens):** Used for secure authentication and authorization of the admin.

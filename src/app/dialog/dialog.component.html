@@ -1,0 +1,54 @@
+<h1 mat-dialog-title>Add Employee Detail</h1>
+<div mat-dialog-content>
+  <form [formGroup]="employeeForm">
+    <mat-form-field appearance="fill">
+      <mat-label>Employee Name</mat-label>
+      <input formControlName="employeeName" matInput placeholder="Name">
+    </mat-form-field>
+    
+
+    <mat-form-field appearance="fill">
+      <mat-label>Category</mat-label>
+      <mat-select formControlName="category" placeholder="Category">
+        <mat-option value="Permanent">Permanent</mat-option>
+        <mat-option value="Temporary">Temporary</mat-option>
+        <mat-option value="Contract">Contract</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Date Of Joining</mat-label>
+      <input formControlName="dateOfJoining" matInput [matDatepicker]="picker">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+
+    <mat-label for="">Experience Level *</mat-label>
+    <mat-radio-group formControlName="experienceLevel" class="example-radio-group">
+      <mat-radio-button *ngFor="let experience of experienceList" [value]="experience" class="example-radio-button">
+        {{experience}}
+      </mat-radio-button>
+    </mat-radio-group>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Salary</mat-label>
+      <input formControlName="salary" matInput type="number" placeholder="Salary">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Performance Review</mat-label>
+      <textarea formControlName="performanceReview" matInput></textarea>
+    </mat-form-field>
+
+    <!-- Password Field -->
+    <mat-form-field appearance="fill">
+      <mat-label>Password</mat-label>
+      <input formControlName="password" matInput type="password" placeholder="Password">
+    </mat-form-field>
+
+  </form>
+</div>
+<div mat-dialog-actions [align]="'end'">
+  <button mat-raised-button color="warn" mat-dialog-close>Close</button>
+  <button mat-raised-button color="primary" (click)="addEmployee()">{{actionBtn}}</button>
+</div>

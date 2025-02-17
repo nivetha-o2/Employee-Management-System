@@ -1,0 +1,55 @@
+<div class="container">
+    <form [formGroup]="signupForm">
+      <h1>Signup Page</h1>
+      
+      <mat-form-field appearance="fill">
+        <mat-label>Employee Name</mat-label>
+        <input formControlName="employeeName" matInput placeholder="Name">
+      </mat-form-field>
+  
+     
+  
+      <mat-form-field appearance="fill">
+        <mat-label>Category</mat-label>
+        <mat-select formControlName="category" placeholder="Category">
+          <mat-option value="Permanent">Permanent</mat-option>
+          <mat-option value="Temporary">Temporary</mat-option>
+          <mat-option value="Contract">Contract</mat-option>
+        </mat-select>
+      </mat-form-field>
+  
+      <mat-form-field appearance="fill">
+        <mat-label>Date Of Joining</mat-label>
+        <input formControlName="dateOfJoining" matInput [matDatepicker]="picker">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+  
+      <mat-label>Experience Level *</mat-label>
+      <mat-radio-group formControlName="experienceLevel" class="example-radio-group">
+        <mat-radio-button value="Fresher" class="example-radio-button">Fresher</mat-radio-button>
+        <mat-radio-button value="Experienced" class="example-radio-button">Experienced</mat-radio-button>
+      </mat-radio-group>
+  
+      <mat-form-field appearance="fill">
+        <mat-label>Salary</mat-label>
+        <input formControlName="salary" matInput type="number" placeholder="Salary">
+      </mat-form-field>
+  
+      <mat-form-field appearance="fill">
+        <mat-label>Performance Review</mat-label>
+        <textarea formControlName="performanceReview" matInput></textarea>
+      </mat-form-field>
+  
+      <mat-form-field appearance="fill">
+        <mat-label>Password</mat-label>
+        <input formControlName="password" matInput type="password" placeholder="Password">
+      </mat-form-field>
+  
+      <div class="action-buttons">
+        <button mat-raised-button color="warn" (click)="signupForm.reset()">Reset</button>
+        <button mat-raised-button color="primary" (click)="signup()">{{actionBtn}}</button>
+      </div>
+    </form>
+  </div>
+  

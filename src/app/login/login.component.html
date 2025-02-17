@@ -1,0 +1,37 @@
+<div class="login-container">
+    <h2>Login</h2>
+    <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+      <!-- Employee Name -->
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Employee Name</mat-label>
+        <input matInput type="text" formControlName="employeeName" required />
+      </mat-form-field>
+  
+      <!-- Password -->
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Password</mat-label>
+        <input matInput type="password" formControlName="password" required />
+      </mat-form-field>
+  
+      <!-- Error Message -->
+      <div *ngIf="errorMessage" class="error-message">
+        {{ errorMessage }}
+      </div>
+  
+      <!-- Submit Button -->
+      <div class="button-container">
+        <button mat-raised-button color="primary" type="submit" [disabled]="loginForm.invalid">
+          Login
+        </button>
+      </div>
+      <br>
+      <!-- Signup Link -->
+  <div class="signup-link">
+    <p>
+      New user? <a routerLink="/signup">Signup</a>
+    </p>
+  </div>
+
+    </form>
+  </div>
+  
